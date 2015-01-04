@@ -1,0 +1,42 @@
+---
+title: "Rquestion"
+output: html_document
+---
+The questions want to ask while learning R
+
+### Q1 2015/01/04 ###
+##Solved##
+這個函數的目的是要將大於 3 的 elements 取代為0
+書上說這樣做
+
+```{r}
+x <- c(1,3,8,2,20)
+x[x>3] <- 0
+x
+```
+
+我的問題是這樣的- 如以下結果是 一個 2 個 elements 的vector， 那麼 - 
+
+```{r}
+x <- c(1,3,8,20)
+x [x>3]
+```
+
+將 0 assign 給 x 為何只會assign 給 那兩個值? 中間的連結搞不太懂 
+
+```{r}
+x[x>3] <- 0
+```
+
+## Answers ## 
+ x > 3 出來是一個 TRUE FALSE 的 vector
+ 
+```{r}
+x > 3
+```
+
+這個 Vector 若帶進 x[] 的indexing 中的話 則是選擇了x 裡 TRUE 的 element 
+因為 Vector1[Vector2] 是根據 Vector2 選擇 Vector1的元件。 至於帶入的Ve
+tor2 怎麼被選擇就是 "[" 這個 function 決定的啦! 然後 <- 0 則是對被選出來元素assignment
+
+
